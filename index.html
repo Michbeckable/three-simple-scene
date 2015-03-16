@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body { margin: 0; }
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+        #canvasWrap {
+            border: 5px solid #eee;
+            margin: 10px auto;
+            width: 1200px;
+            height: 800px;
+        }
+    </style>
+</head>
+<body>
+
+    <script src="lib/ThreeJS/three.js"></script>
+    <script src="lib/jQuery/jquery-1.11.2.js"></script>
+    <script src="lib/Geometry.js"></script>
+    <script src="lib/CameraControl/DHCameraControl.js"></script>
+    <script src="lib/Utils.js"></script>
+    <script src="lib/simpleScene.js"></script>
+
+
+    <script>
+
+        // init Three.js scene on load
+        $(function() {
+            SimpleScene.InitScene();
+        });
+
+    </script>
+
+    <div id="canvasWrap">
+
+    </div>
+
+</body>
+</html>
