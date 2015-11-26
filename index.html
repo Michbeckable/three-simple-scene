@@ -9,11 +9,15 @@
             width: 100%;
             height: 100%;
         }
-        #canvasWrap {
+        #wrap {
             border: 5px solid #eee;
             margin: 10px auto;
             width: 1200px;
             height: 800px;
+        }
+        #canvasWrap {
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -21,24 +25,30 @@
 
     <script src="lib/ThreeJS/three.js"></script>
     <script src="lib/jQuery/jquery-1.11.2.js"></script>
-    <script src="lib/Geometry.js"></script>
-    <script src="lib/CameraControl/DHCameraControl.js"></script>
-    <script src="lib/Utils.js"></script>
-    <script src="lib/simpleScene.js"></script>
+    <script src="src/geometry.js"></script>
+    <script src="lib/CameraControl/cameraControl.js"></script>
+    <script src="src/utils.js"></script>
+    <script src="src/simpleScene.js"></script>
 
 
     <script>
 
         // init Three.js scene on load
         $(function() {
-            SimpleScene.InitScene();
+            SimpleScene.initScene();
+
+            $('#buttonDispose').click(function(){
+                SimpleScene.disposeScene();
+            });
         });
 
     </script>
 
-    <div id="canvasWrap">
-
+    <div id="wrap">
+        <div id="canvasWrap"></div>
+        <div><button id="buttonDispose">Dispose</button></div>
     </div>
+
 
 </body>
 </html>
